@@ -55,7 +55,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town"
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
           }
         ]
       },
@@ -212,11 +212,29 @@
     ],
     "Notification": [
       {
-        "matcher": ".*",
+        "matcher": "waiting for your input|approve|permission|confirm|authorization",
         "hooks": [
           {
             "type": "command",
             "command": "python .claude/play_sound.py .claude/sounds/dialogue_gold_please.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "error|failed|problem|issue",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_dad_gum.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "complete|success|done|finished",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav"
           }
         ]
       }
