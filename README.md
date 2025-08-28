@@ -72,7 +72,7 @@ cd age-of-claude
 
 - Python 3.x (for cross-platform sound playback)
 - Audio playback support:
-  - **Windows**: Built-in PowerShell
+  - **Windows**: Python winsound library
   - **macOS**: Built-in `afplay`
   - **Linux**: `aplay`, `paplay`, or `ffplay`
 
