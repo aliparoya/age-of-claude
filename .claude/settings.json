@@ -1,0 +1,265 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/claude_startup.wav .claude/sounds/music_game_startup.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_nice_town.wav .claude/sounds/dialogue_join_me.wav"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_yes.wav .claude/sounds/villager_select4.WAV .claude/sounds/villager_train4.wav"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_select1.WAV .claude/sounds/villager_select18.WAV .claude/sounds/villager_select19.WAV"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_attack_them_now.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Grep|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_i_need_food.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "WebFetch|WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/priest_convert_wololo5.WAV .claude/sounds/priest_convert_ayeohoho5.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "TodoWrite",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_train1.wav .claude/sounds/villager_train4.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "LS",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_select4.WAV"
+          }
+        ]
+      },
+      {
+        "matcher": "NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_whos_the_man.wav"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav .claude/sounds/dialogue_i_just_got_some_satisfaction.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Grep|Glob|LS",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_select18.WAV"
+          }
+        ]
+      },
+      {
+        "matcher": "WebFetch|WebSearch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_select19.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "TodoWrite",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/villager_train1.wav"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/soldier_select_rudkin1.wav"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_gold_please.wav"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "exit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_im_weak_please_dont_kill_me.wav .claude/sounds/dialogue_get_out.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/soldier_select_papadakis5.wav"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_i_need_food.wav"
+          }
+        ]
+      },
+      {
+        "matcher": "manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/play_sound.py .claude/sounds/dialogue_your_attempts_are_futile.wav"
+          }
+        ]
+      }
+    ]
+  }
+}
