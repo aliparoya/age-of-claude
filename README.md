@@ -4,15 +4,18 @@
 
 ## Overview
 
-Age of Claude brings the iconic sounds of Age of Empires to your Claude Code sessions. Every action triggers nostalgic AoE dialogue and sound effects, turning your coding sessions into an RTS experience. It's also actually useful and not just a gimmick. For example, I have it say "Hey, I'm in your town" when Claude starts to create or edit a file. There's a 10 second delay, so it doesn't become annoying when things are moving fast. The sounds folder has a ton of unused sounds, so feel free to play around in .claude/settings.json to put in other sounds for the different hook triggers. It's also a fun way to learn about the hook system in Claude Code.
+Age of Claude brings the iconic sounds of Age of Empires to your Claude Code sessions. Every action triggers nostalgic AoE dialogue and sound effects, turning your coding sessions into an RTS experience. It's also actually useful and not just a gimmick. For example, I have it say "Hey, I'm in your town" when Claude starts to create or edit a file. 
+
+The sounds folder has a ton of unused sounds, so feel free to play around in .claude/settings.json to put in other sounds for the different hook triggers. It's also a fun way to learn about the hook system in Claude Code.
 
 You'll need to have python installed as that's what I used to have it work on all of the major operating systems. You can update the hook commands to run things natively in your OS if you prefer not to use python.
+
+There's a silence.wav file in the sounds folder. That adds a tiny bit of delay at the start of every sound so the beginning of the dialogue doesn't get cut off. You can also use the file as a placeholder for some of the hooks, so if you want to keep the hook in the file without it making a sound.
 
 ## Features
 
 - 🎮 **Cross-platform support** - Works on Windows, macOS, and Linux
 - 🔊 **Smart sound mapping** - Different sounds for different Claude Code hooks and notification types
-- ⏱️ **Delay Between Sounds** - Configurable delay between sounds so it doesn't become annoying.
 
 ## Hook Sound Mappings
 
@@ -64,10 +67,6 @@ cd age-of-claude
 - The `.claude/sounds/` folder contains many Age of Empires sound files to choose from
 - You can assign different sounds to any hook by modifying the command paths in settings.json
 
-### Debounce Control
-- Adjust the minimum time between sounds by editing `DEBOUNCE_SECONDS` at the top of `.claude/play_sound.py`
-- Default is 10 seconds
-- Set to 0 to disable debounce entirely
 
 ## Credits
 
