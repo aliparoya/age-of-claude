@@ -10,7 +10,7 @@ The sounds folder has a ton of unused sounds, so feel free to play around in .cl
 
 You'll need to have python installed as that's what I used to have it work on all of the major operating systems. You can update the hook commands to run things natively in your OS if you prefer not to use python.
 
-There's a silence.wav file in the sounds folder. That adds a tiny bit of delay at the start of every sound so the beginning of the dialogue doesn't get cut off. You can also use the file as a placeholder for some of the hooks, so if you want to keep the hook in the file without it making a sound.
+There's a silence.wav file in the sounds folder that you can use as a placeholder for some of the hooks, so if you want to keep the hook in the file without it making a sound.
 
 ## Features
 
