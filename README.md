@@ -19,25 +19,41 @@ There's a silence.wav file in the sounds folder. That adds a tiny bit of delay a
 
 ## Hook Sound Mappings
 
-| Hook | Trigger Condition |
-|------|------------------|
-| **SessionStart** | Session begins (startup/resume) |
-| **UserPromptSubmit** | User sends a message |
-| **Stop** | Claude stops responding |
-| **Notification** | |
-| - Approval needed | Messages containing: approve, permission, confirm |
-| - Error occurred | Messages containing: error, failed, problem |
-| - Task completed | Messages containing: complete, success, done |
-| **Tool Usage** | |
-| - Read/Search | Using Read, Grep, Glob, LS tools |
-| - Write/Edit | Using Write, Edit, MultiEdit tools |
-| - Bash commands | Executing shell commands |
-| - Web operations | WebFetch, WebSearch |
-| - Task management | TodoWrite, Task agents |
-| **Session Management** | |
-| - SessionEnd | Exiting or clearing session |
-| - PreCompact | Before context compaction |
-| - SubagentStop | When subagents complete |
+```
+📁 Session Lifecycle
+├── UserPromptSubmit ────── Random villager selection sounds
+├── Stop ────────────────── villager_train1.wav
+├── SessionEnd 
+│   ├── exit ────────────── Random farewell sounds
+│   └── clear ───────────── soldier_select_papadakis5.wav
+└── SubagentStop ────────── soldier_select_rudkin1.wav
+
+📁 Tool Operations - PreToolUse (before tool runs)
+├── Read ────────────────── Random villager selection sounds
+├── Write ───────────────── dialogue_hey_im_in_your_town.wav
+├── Edit/MultiEdit ──────── dialogue_hey_im_in_your_town.wav
+├── NotebookEdit ────────── dialogue_hey_im_in_your_town.wav
+├── Bash ────────────────── dialogue_attack_them_now.wav
+├── Grep/Glob ───────────── dialogue_i_need_food.wav
+├── LS ──────────────────── villager_select4.WAV
+├── WebFetch/WebSearch ──── working_sound.wav
+├── Task ────────────────── Random priest conversion sounds
+├── TodoWrite ───────────── Random villager training sounds
+└── ExitPlanMode ────────── dialogue_whos_the_man.wav
+
+📁 Tool Operations - PostToolUse (after tool completes)
+├── Write/Edit/MultiEdit ── Random success sounds
+├── Bash ────────────────── dialogue_aww_yeah.wav
+├── Grep/Glob/LS ────────── villager_select18.WAV
+├── WebFetch/WebSearch ──── villager_select19.wav
+├── Task ────────────────── working_sound.wav
+└── TodoWrite ───────────── working_sound.wav
+
+📁 Context Management
+└── PreCompact
+    ├── auto ────────────── dialogue_i_need_food.wav
+    └── manual ──────────── dialogue_your_attempts_are_futile.wav
+```
 
 ## Installation
 

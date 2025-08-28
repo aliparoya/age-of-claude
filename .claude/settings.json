@@ -1,32 +1,12 @@
 {
   "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "startup",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/claude_startup.wav .claude/sounds/music_game_startup.wav"
-          }
-        ]
-      },
-      {
-        "matcher": "resume",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_nice_town.wav .claude/sounds/dialogue_join_me.wav"
-          }
-        ]
-      }
-    ],
     "UserPromptSubmit": [
       {
         "matcher": ".*",
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_yes.wav .claude/sounds/villager_select4.WAV .claude/sounds/villager_train4.wav"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/dialogue_yes.wav', r'.claude/sounds/villager_select4.WAV', r'.claude/sounds/villager_train4.wav']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -37,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_select1.WAV .claude/sounds/villager_select18.WAV .claude/sounds/villager_select19.WAV"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/villager_select1.WAV', r'.claude/sounds/villager_select18.WAV', r'.claude/sounds/villager_select19.WAV']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -46,7 +26,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_hey_im_in_your_town.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -55,7 +35,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_hey_im_in_your_town.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -64,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_attack_them_now.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_attack_them_now.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -73,7 +53,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_i_need_food.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_i_need_food.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -82,7 +62,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/working_sound.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -91,7 +71,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/priest_convert_wololo5.WAV .claude/sounds/priest_convert_ayeohoho5.wav"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/priest_convert_wololo5.WAV', r'.claude/sounds/priest_convert_ayeohoho5.wav']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -100,7 +80,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_train1.wav .claude/sounds/villager_train4.wav"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/villager_train1.wav', r'.claude/sounds/villager_train4.wav']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -109,7 +89,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_select4.WAV"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/villager_select4.WAV'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -118,7 +98,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_hey_im_in_your_town.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_hey_im_in_your_town.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -127,7 +107,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_whos_the_man.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_whos_the_man.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -138,7 +118,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav .claude/sounds/dialogue_i_just_got_some_satisfaction.wav"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/dialogue_aww_yeah.wav', r'.claude/sounds/dialogue_i_just_got_some_satisfaction.wav']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -147,7 +127,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_aww_yeah.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -156,7 +136,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_select18.WAV"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/villager_select18.WAV'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -165,7 +145,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_select19.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/villager_select19.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -174,7 +154,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/working_sound.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -183,7 +163,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/working_sound.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/working_sound.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -194,7 +174,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/villager_train1.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/villager_train1.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -205,36 +185,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/soldier_select_rudkin1.wav"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "matcher": "waiting for your input|approve|permission|confirm|authorization",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_gold_please.wav"
-          }
-        ]
-      },
-      {
-        "matcher": "error|failed|problem|issue",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_dad_gum.wav"
-          }
-        ]
-      },
-      {
-        "matcher": "complete|success|done|finished",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_aww_yeah.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/soldier_select_rudkin1.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -245,7 +196,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_im_weak_please_dont_kill_me.wav .claude/sounds/dialogue_get_out.wav"
+            "command": "python -c \"import platform, os, random; sound=random.choice([r'.claude/sounds/dialogue_im_weak_please_dont_kill_me.wav', r'.claude/sounds/dialogue_get_out.wav']); os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -254,7 +205,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/soldier_select_papadakis5.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/soldier_select_papadakis5.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
@@ -265,7 +216,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_i_need_food.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_i_need_food.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       },
@@ -274,7 +225,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/play_sound.py .claude/sounds/dialogue_your_attempts_are_futile.wav"
+            "command": "python -c \"import platform, os; sound=r'.claude/sounds/dialogue_your_attempts_are_futile.wav'; os.system(f'afplay {sound} 2>/dev/null &') if platform.system()=='Darwin' else __import__('winsound').PlaySound(sound, __import__('winsound').SND_FILENAME) if platform.system()=='Windows' else os.system(f'aplay -q {sound} 2>/dev/null &')\""
           }
         ]
       }
